@@ -8,6 +8,7 @@ import IconButton from 'material-ui/IconButton';
 import ArrowBackIcon from 'material-ui-icons/ArrowBack';
 import LockOutlineIcon from 'material-ui-icons/LockOutline';
 import LockOpenIcon from 'material-ui-icons/LockOpen';
+import UndoIcon from 'material-ui-icons/Undo';
 
 import messages from './Navbar.messages';
 import './Navbar.css';
@@ -111,6 +112,19 @@ function Navbar({
           onClick={onUndoClick}
         >
           {isLocked ? <LockOutlineIcon /> : <LockOpenIcon />}
+        </IconButton>
+      </div>
+
+      <div className="Navbar__group Navbar__group--end">
+        <IconButton
+          classes={{ keyboardFocused: classes.keyboardFocused }}
+          focusRipple={true}
+          aria-label={intl.formatMessage(messages.undo)}
+          title={intl.formatMessage(messages.undo)}
+          color="contrast"
+          onClick={onUndoClick}
+        >
+          <UndoIcon />
         </IconButton>
       </div>
     </div>
