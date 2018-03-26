@@ -18,7 +18,8 @@ function loginRequest() {
 
 function loginSuccess() {
   return {
-    type: LOGIN_SUCCESS
+    type: LOGIN_SUCCESS,
+    payload: { success: true }
   };
 }
 

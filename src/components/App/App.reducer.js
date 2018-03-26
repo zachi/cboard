@@ -32,6 +32,12 @@ function appReducer(state = initialState, action) {
         isLogging: true
       };
     case LOGIN_SUCCESS:
+      return {
+        ...state,
+        loginStatus: action.payload || {},
+        isLogging: false,
+        isFirstVisit: false
+      };
     case LOGIN_ERROR:
       return {
         ...state,
